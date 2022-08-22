@@ -770,6 +770,7 @@ _ = plt.semilogy(lti.hsv(), '.-')
 ### FOM Bode Plot
 
 ```{code-cell} ipython3
+import numpy as np
 w = np.logspace(-1, 3, 1000)
 _ = lti.transfer_function.bode_plot(w)
 ```
