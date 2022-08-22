@@ -11,7 +11,8 @@ ENV USER=${NB_USER} \
     HOME=/pymor
 
 COPY . /pymor/
-RUN chown -R ${NB_USER} /pymor
+RUN chown -R ${NB_USER} /pymor \
+  && pip install "jupyter-client<7" "dune-xt~=2021.1.2" "dune-gdt~=2021.1.2"
 USER ${NB_USER}
 
 ENTRYPOINT []
